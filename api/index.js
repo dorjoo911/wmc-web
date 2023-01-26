@@ -24,7 +24,7 @@ app.use((err, req, res, next) => {
 mongoose
   .connect("mongodb+srv://wmc:wmc20@wmccluster1.5v650it.mongodb.net/test")
   .then(() => {
-    app.listen(process.env.API_PORT, () => console.log("listening ... 4000"));
+    app.listen(4000, () => console.log("listening ... 4000"));
   });
 // if (process.env.API_PORT) {
 //   app.listen(process.env.API_PORT);
