@@ -13,9 +13,9 @@ dotenv.config();
 app.use(express.json());
 app.use(cors());
 
-app.use("/users", userRouter);
-app.use("/login", authRouter);
-app.use("/posts", postRouter);
+app.use("/api/users", userRouter);
+app.use("/api/login", authRouter);
+app.use("/api/posts", postRouter);
 
 app.use((err, req, res, next) => {
   res.status(500).json(new Response(true, err.message, null));

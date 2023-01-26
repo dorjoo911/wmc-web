@@ -6,7 +6,7 @@ import Home from "./Home";
 import ListPosts from "./ListPosts";
 import About from "./screens/About";
 
-axios.defaults.baseURL = "https://wmc-9wsqu1hsi-dorjoo911.vercel.app:4000";
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 function App() {
   return (
     <header className="App-header">
