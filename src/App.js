@@ -1,21 +1,29 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { useState } from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import axios from "axios";
+import AddPost from "./components/AddPosts";
+import Loginout from "./Loginout";
+import Home from "./Home";
+import ListPosts from "./ListPosts";
+import About from "./screens/About";
 
+axios.defaults.baseURL = "http://localhost:4000";
 function App() {
-  const [result, setresult] = useState("");
-  async function fetchInfo() {
-    // console.log(process.env.REACT_APP_API_URL);
-    const url = `http://localhost:4000/api/test`;
-    const response = await fetch(url);
-    const json = await response.json();
-    setresult(json);
-  }
   return (
-    <div>
-      <button onClick={fetchInfo}>Click here</button>
-      <div>result: {result}</div>
-    </div>
+    <header className="App-header">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/aboutus" element={<About />} />
+          <Route path="/auth" element={<Loginout />}></Route>
+          <Route path="/addpost" element={<AddPost />}></Route>
+          <Route path="/listpost" element={<ListPosts />}></Route>
+          {/* <Route path="/followers" element={<Followers />}></Route> */}
+          {/* <Route path="/review" element={<Review />}></Route> */}
+          {/* <Route path="/join" element={<Join />}></Route> */}
+        </Routes>
+      </BrowserRouter>
+    </header>
   );
 }
 
