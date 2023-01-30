@@ -50,7 +50,7 @@ export default function AddPost() {
         </p>
         <MDBInput
           wrapperClass="mb-4"
-          label="Title"
+          label="Гарчиг оруулна уу"
           id="form1"
           type="text"
           value={title}
@@ -59,7 +59,7 @@ export default function AddPost() {
 
         <MDBInput
           wrapperClass="mb-4"
-          label="description"
+          label="Дэлгэнгүй мэдээлэл оруулна уу"
           id="form1"
           type="text"
           value={description}
@@ -67,7 +67,7 @@ export default function AddPost() {
         />
         <MDBInput
           wrapperClass="mb-4"
-          label="deadline"
+          label="Огноог оруулах"
           id="form1"
           type="date"
           value={deadline}
@@ -75,10 +75,10 @@ export default function AddPost() {
         />
 
         <MDBBtn className="mb-2 w-50" onClick={addpost}>
-          Post request
+          Залбирал оруулах
         </MDBBtn>
         <MDBBtn outline className="mb-2 w-50" onClick={cancelpost}>
-          Cancel request
+          Цуцлах
         </MDBBtn>
       </MDBTabsContent>
     </MDBContainer>

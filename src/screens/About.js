@@ -17,6 +17,8 @@ import {
   MDBBtn,
 } from "mdb-react-ui-kit";
 import { useNavigate } from "react-router-dom";
+import NavBarCus from "../components/NavBarCus";
+import Footer from "../components/Footer";
 export default function About() {
   const navigate = useNavigate();
   const [showNavText, setShowNavText] = useState(false);
@@ -31,7 +33,7 @@ export default function About() {
   };
   return (
     <div style={{ margin: "5px" }}>
-      <MDBNavbar expand="lg" dark bgColor="dark">
+      {/* <MDBNavbar expand="lg" dark bgColor="dark">
         <MDBContainer fluid>
           <MDBNavbarBrand onClick={goHome}>
             {" "}
@@ -72,7 +74,8 @@ export default function About() {
             </MDBBtn>
           </MDBCollapse>
         </MDBContainer>
-      </MDBNavbar>{" "}
+      </MDBNavbar>{" "} */}
+      <NavBarCus />
       <br />
       <MDBCard background="dark" className="text-white">
         <MDBCardImage
@@ -105,6 +108,8 @@ export default function About() {
           </MDBCardText>
         </MDBCardOverlay>
       </MDBCard>
+      <br />
+      <Footer />
     </div>
   );
 }

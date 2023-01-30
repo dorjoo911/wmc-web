@@ -1,5 +1,5 @@
 import React from "react";
-
-export default function Verses({ words }) {
-  return <div>{words[Math.floor(Math.random() * words.length) + 1]}</div>;
+import words from "../quotes";
+export default function Verses() {
+  return <div>{words[Math.floor(Math.random() * words.length)]}</div>;
 }

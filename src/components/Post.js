@@ -14,49 +14,43 @@ import {
   MDBIcon,
   MDBInput,
   MDBCardText,
+  MDBRow,
+  MDBCol,
 } from "mdb-react-ui-kit";
 import axios from "axios";
-import Review from "./Review";
-import Verses from "./Verses";
-const words = [
-  "Proverbs 16:24 Pleasant words are like a honeycomb, sweetness to the soul and health to the bones.",
-  "John 1:1 In the beginning was the Word, and the Word was with God, and the Word was God",
-  "James 1:22 But be ye doers of the word, and not hearers only, deceiving your own selves.",
-  "Ephesians 6:17 And take the helmet of salvation, and the sword of the Spirit, which is the word of God",
-  "1 John 3:18 My little children, let us not love in word, neither in tongue; but in deed and in truth",
-  "Psalm 56:10 In God will I praise his word: In the LORD will I praise his word",
-  "Psalm 105:19 Until the time that his word came: The word of the LORD tried him.",
-  "Zechariah 1:13 And the LORD answered the angel that talked with me with good words and comfortable words.",
-  "Matthew 12:37 For by thy words thou shalt be justified, and by thy words thou shalt be condemned.",
-  "Colossians 3:17 And whatsoever ye do in word or deed, do all in the name of the Lord Jesus, giving thanks to God and the Father by him.",
-];
+
+import PostHeader from "./PostHeader";
+import PostFooterHeader from "./PostFooterHeader";
+import PostFooterBody from "./post/PostFooterBody";
+import PostFooterComment from "./post/PostFooterComment";
+
 export default function Post({ posts, id }) {
   const token = localStorage.getItem("SavedToken");
   const infoToken = jwt_decode(token);
-  const [comment, setcomment] = useState("");
-  const [toggle, settoggle] = useState(true);
+  // const [comment, setcomment] = useState("");
+  // const [toggle, settoggle] = useState(true);
 
   const deletePost = async (id) => {
     await axios.delete(`/posts/${id}`);
     window.location.reload();
   };
 
-  const commentout = async (id) => {
-    await axios.put(`/posts/${id}`, {
-      userId: infoToken.id,
-      userName: infoToken.fullname,
-      comment: comment,
-      date: Date.now().toString(),
-    });
-    window.location.reload();
-  };
+  // const commentout = async (id) => {
+  //   await axios.put(`/posts/${id}`, {
+  //     userId: infoToken.id,
+  //     userName: infoToken.fullname,
+  //     comment: comment,
+  //     date: Date.now().toString(),
+  //   });
+  //   window.location.reload();
+  // };
 
-  const close = () => {
-    settoggle(false);
-  };
-  const open = () => {
-    settoggle(true);
-  };
+  // const close = () => {
+  //   settoggle(false);
+  // };
+  // const open = () => {
+  //   settoggle(true);
+  // };
   const pray = async (id) => {
     axios.put(`/posts/${id}`, {
       userId: infoToken.id,
@@ -68,75 +62,58 @@ export default function Post({ posts, id }) {
   return (
     <>
       {posts.map((post) => (
-        <MDBCard alignment="center" key={post._id}>
-          <MDBCardHeader
-            style={{ display: "flex", justifyContent: "space-between" }}
-          >
-            <MDBBtn outline>
-              <MDBIcon fas icon="cross" /> joined prayers
-              <MDBBadge className="ms-2" color="danger">
-                {post.prayers.length ? post.prayers.length : 0}
-              </MDBBadge>
-            </MDBBtn>
-            Added by: {post.userName}
-          </MDBCardHeader>
-          <MDBCardBody>
-            <MDBCardTitle>{post.title}</MDBCardTitle>
-            <MDBPopover
-              color="secondary"
-              btnChildren="Read description"
-              placement="top"
-            >
-              <MDBPopoverHeader>{post.title}</MDBPopoverHeader>
-              <MDBPopoverBody>{post.description}</MDBPopoverBody>
-            </MDBPopover>
-            <MDBBtn
-              href="#"
-              outline
-              color="success"
-              onClick={() => {
-                pray(post._id);
-              }}
-            >
-              willing to pray
-            </MDBBtn>
-          </MDBCardBody>
-          <MDBCardFooter className="text-muted" style={{ textAlign: "right" }}>
-            <MDBCard
-              shadow="0"
-              border="info"
-              background="white"
-              className="mb-3"
-              style={{ textAlign: "left", height: "200px" }}
-            >
-              <MDBCardHeader
-                style={{
-                  fontFamily: "Copperplate, Papyrus, fantasy",
-                  color: "brown",
+        <MDBCol key={post._id}>
+          <MDBCard alignment="center">
+            <PostHeader post={post} />
+            <MDBCardBody>
+              <MDBCardTitle>{post.title}</MDBCardTitle>
+              <MDBPopover
+                color="secondary"
+                btnChildren="Дэлгэнгүйг унших"
+                placement="top"
+              >
+                <MDBPopoverHeader>{post.title}</MDBPopoverHeader>
+                <MDBPopoverBody>{post.description}</MDBPopoverBody>
+              </MDBPopover>
+              <MDBBtn
+                href="#"
+                outline
+                color="success"
+                onClick={() => {
+                  pray(post._id);
                 }}
               >
-                <Verses words={words} />
-              </MDBCardHeader>
-              <MDBCardBody style={myComponent1}>
-                {/* <MDBCardTitle></MDBCardTitle> */}
-                <MDBCardText style={myComponent2}>
-                  <Review reviews={post.review} />
-                </MDBCardText>
-              </MDBCardBody>
-            </MDBCard>
-            <label style={{ color: "blue" }}>Due date: </label>
-            {new Intl.DateTimeFormat("en-US", {
-              year: "numeric",
-              month: "2-digit",
-              day: "2-digit",
-            }).format(post.deadline)}{" "}
-            <MDBPopover outline btnChildren="Comment out" onClick={open}>
+                залбиралд нэгдэх
+              </MDBBtn>
+            </MDBCardBody>
+            <MDBCardFooter
+              className="text-muted"
+              style={{ textAlign: "right" }}
+            >
+              <MDBCard
+                shadow="0"
+                border="info"
+                background="white"
+                className="mb-3"
+                style={{ textAlign: "left", height: "200px" }}
+              >
+                <PostFooterHeader />
+                <PostFooterBody post={post} />
+              </MDBCard>
+              <PostFooterComment post={post} />
+              <label style={{ color: "blue" }}>Дуусах огноо: </label>
+              {new Intl.DateTimeFormat("en-US", {
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+              }).format(post.deadline)}{" "}
+              {/* <MDBPopover outline btnChildren="Сэтгэгдэл бичих" onClick={open}>
               {toggle ? (
                 <>
                   <MDBPopoverBody>
                     <MDBInput
                       wrapperClass="mb-4"
-                      label="comment"
+                      label="Сэтгэгдэл ..."
                       id="form2"
                       type="text"
                       placeholder="your text here:"
@@ -153,7 +130,7 @@ export default function Post({ posts, id }) {
                       color="success"
                       className="mx-2"
                     >
-                      Submit
+                      Оруулах
                     </MDBBtn>
                     <MDBBtn
                       onClick={close}
@@ -161,38 +138,27 @@ export default function Post({ posts, id }) {
                       color="danger"
                       className="mx-2"
                     >
-                      Cancel
+                      Цуцлах
                     </MDBBtn>
                   </MDBPopoverHeader>
                 </>
               ) : null}
-            </MDBPopover>
-            {post.userId === id ? (
-              <MDBBtn
-                onClick={() => {
-                  deletePost(post._id);
-                }}
-                outline
-                className="mx-2"
-                color="danger"
-              >
-                Delete
-              </MDBBtn>
-            ) : null}
-          </MDBCardFooter>
-        </MDBCard>
+            </MDBPopover> */}
+              {post.userId === id ? (
+                <MDBBtn
+                  onClick={() => {
+                    deletePost(post._id);
+                  }}
+                  outline
+                  color="danger"
+                >
+                  Устгах
+                </MDBBtn>
+              ) : null}
+            </MDBCardFooter>
+          </MDBCard>
+        </MDBCol>
       ))}
     </>
   );
 }
-const myComponent1 = {
-  height: "100%",
-  width: "100%",
-  overflow: "hidden",
-};
-const myComponent2 = {
-  height: "100%",
-  width: "100%",
-  overflow: "auto",
-  paddingRight: "20px",
-};

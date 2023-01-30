@@ -7,6 +7,7 @@ import ListPosts from "./ListPosts";
 import About from "./screens/About";
 
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+console.log(process.env.REACT_APP_API_URL);
 function App() {
   return (
     <header className="App-header">

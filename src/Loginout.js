@@ -120,7 +120,7 @@ function Loginout({ user }) {
 
       const token = res.data.data.accessToken;
       const detoken = jwt_decode(token);
-      console.log(detoken, "detoken");
+      // console.log(detoken, "detoken");
       localStorage.setItem("SavedToken", "Bearer " + token);
       localStorage.setItem("idToken", detoken.id);
       localStorage.setItem("detoken", detoken);

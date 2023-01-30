@@ -9,6 +9,8 @@ import {
   MDBNavbarBrand,
   MDBInputGroup,
   MDBBtn,
+  MDBRow,
+  MDBCol,
 } from "mdb-react-ui-kit";
 
 export default function ListPosts() {
@@ -50,29 +52,45 @@ export default function ListPosts() {
               alt=""
               style={{ width: "50px" }}
             />{" "}
-            WMC
+            W.M.C
           </MDBNavbarBrand>
+          <span style={{ color: "brown" }}>
+            {infoToken.fullname.toUpperCase()} танд энэ өдрийн мэнд хүргэе.
+          </span>
           <MDBInputGroup tag="form" className="d-flex w-auto mb-3">
             <input
               className="form-control"
-              placeholder="Search by title
-              "
+              placeholder="Залбирлын сэдэв хайх ..."
               aria-label="Search"
               type="Search"
             />
-            <MDBBtn outline>Search</MDBBtn>
-            <MDBBtn outline onClick={logout}>
-              Logout
+            <MDBBtn outline>Болих</MDBBtn>
+            <MDBBtn outline color="warning" onClick={logout}>
+              Гарах
             </MDBBtn>
           </MDBInputGroup>
         </MDBContainer>
       </MDBNavbar>
-      <MDBBtn style={{ marginTop: "5px", textAlign: "left" }} onClick={addpost}>
-        Greething{" "}
-        <span style={{ color: "yellow" }}>{infoToken.fullname} !</span> if you
-        have a request then just click here
-      </MDBBtn>
-      <Post posts={posts} id={id} />
+      <div
+        style={{
+          marginLeft: "10%",
+          width: "80%",
+        }}
+      >
+        <MDBBtn
+          onClick={addpost}
+          outline
+          style={{
+            width: "100%",
+          }}
+        >
+          Залбирлын сэдэв оруулах бол энд дарна уу.
+        </MDBBtn>
+
+        <MDBRow className="row-cols-1 row-cols-md-2 g-4">
+          <Post posts={posts} id={id} />
+        </MDBRow>
+      </div>
     </div>
   );
 }
