@@ -69,39 +69,39 @@ function Loginout({ user }) {
     }
   };
 
-  // const onFileChange = (event) => {
-  //   setSelectedFile({ selectedFile: event.target.files[0] });
-  // };
+  const onFileChange = (event) => {
+    setSelectedFile({ selectedFile: event.target.files[0] });
+  };
 
-  // const onFileUpload = () => {
-  //   const formData = new FormData();
-  //   formData.append("myFile", selectedFile, selectedFile.name);
+  const onFileUpload = () => {
+    const formData = new FormData();
+    formData.append("myFile", selectedFile, selectedFile.name);
 
-  //   console.log(selectedFile);
-  //   axios.post("/uploadfile", formData);
-  // };
+    console.log(selectedFile);
+    axios.post("/uploadfile", formData);
+  };
 
-  // const fileData = () => {
-  //   if (selectedFile) {
-  //     return (
-  //       <div>
-  //         <h2>File Details:</h2>
-  //         <p>File Name: {selectedFile.name}</p>
-  //         <p>File Type: {selectedFile.type}</p>
-  //         <p>Last Modified: {selectedFile.lastModifiedDate.toDateString()}</p>
-  //       </div>
-  //     );
-  //   } else {
-  //     return (
-  //       <div>
-  //         <br />
-  //         <p style={{ padding: "14px", color: "blue" }}>
-  //           Choose before Pressing the Upload button
-  //         </p>
-  //       </div>
-  //     );
-  //   }
-  // };
+  const fileData = () => {
+    if (selectedFile) {
+      return (
+        <div>
+          <h2>File Details:</h2>
+          <p>File Name: {selectedFile.name}</p>
+          <p>File Type: {selectedFile.type}</p>
+          <p>Last Modified: {selectedFile.lastModifiedDate.toDateString()}</p>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <br />
+          <p style={{ padding: "14px", color: "blue" }}>
+            Choose before Pressing the Upload button
+          </p>
+        </div>
+      );
+    }
+  };
 
   const handleJustifyClick = (value) => {
     if (value === justifyActive) {

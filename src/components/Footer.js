@@ -100,12 +100,7 @@ export default function Footer() {
         </section>
 
         <section className="mb-4">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            distinctio earum repellat quaerat voluptatibus placeat nam, commodi
-            optio pariatur est quia magnam eum harum corrupti dicta, aliquam
-            sequi voluptate quas.
-          </p>
+          <p></p>
         </section>
 
         <section className="">
@@ -143,76 +138,76 @@ export default function Footer() {
               <ul className="list-unstyled mb-0">
                 <li>
                   <a href="#!" className="text-white">
-                    Link 1
+                    Зуны камп
                   </a>
                 </li>
                 <li>
                   <a href="#!" className="text-white">
-                    Link 2
+                    Өвлийн камп
                   </a>
                 </li>
                 <li>
                   <a href="#!" className="text-white">
-                    Link 3
+                    Наадам
                   </a>
                 </li>
                 <li>
                   <a href="#!" className="text-white">
-                    Link 4
-                  </a>
-                </li>
-              </ul>
-            </MDBCol>
-
-            <MDBCol lg="3" md="6" className="mb-4 mb-md-0">
-              <h5 className="text-uppercase">Links</h5>
-
-              <ul className="list-unstyled mb-0">
-                <li>
-                  <a href="#!" className="text-white">
-                    Link 1
-                  </a>
-                </li>
-                <li>
-                  <a href="#!" className="text-white">
-                    Link 2
-                  </a>
-                </li>
-                <li>
-                  <a href="#!" className="text-white">
-                    Link 3
-                  </a>
-                </li>
-                <li>
-                  <a href="#!" className="text-white">
-                    Link 4
+                    Шинэ жил
                   </a>
                 </li>
               </ul>
             </MDBCol>
 
             <MDBCol lg="3" md="6" className="mb-4 mb-md-0">
-              <h5 className="text-uppercase">Links</h5>
+              <h5 className="text-uppercase">Холбоос</h5>
 
               <ul className="list-unstyled mb-0">
                 <li>
                   <a href="#!" className="text-white">
-                    Link 1
+                    Магтаал
                   </a>
                 </li>
                 <li>
                   <a href="#!" className="text-white">
-                    Link 2
+                    Библи сургууль
                   </a>
                 </li>
                 <li>
                   <a href="#!" className="text-white">
-                    Link 3
+                    Шөнийн залбирал
                   </a>
                 </li>
                 <li>
                   <a href="#!" className="text-white">
-                    Link 4
+                    Тээврийн хэрэгсэл
+                  </a>
+                </li>
+              </ul>
+            </MDBCol>
+
+            <MDBCol lg="3" md="6" className="mb-4 mb-md-0">
+              <h5 className="text-uppercase">Холбоос</h5>
+
+              <ul className="list-unstyled mb-0">
+                <li>
+                  <a href="#!" className="text-white">
+                    Ажлын байр
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" className="text-white">
+                    Тусламж
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" className="text-white">
+                    Нэгдсэн цуглаан
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" className="text-white">
+                    Бусад
                   </a>
                 </li>
               </ul>
@@ -225,7 +220,7 @@ export default function Footer() {
         className="text-center p-3"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
       >
-        © 2023 Copyright: Mike Erdene,{" "}
+        © 2023 Copyright: Washington Mongolian Church,{" "}
         <a className="text-white" href="https://mikeportfolio.click">
           Developed by Mike Erdene
         </a>

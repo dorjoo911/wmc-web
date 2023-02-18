@@ -31,31 +31,29 @@ const Home = () => {
         <MDBCarouselItem
           className="w-100 d-block"
           itemId={1}
-          src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/277442416_4459071994194409_8565933829294993435_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=2v-4hsOYh58AX_lapJ2&_nc_ht=scontent-atl3-2.xx&oh=00_AfDLIJ8CLSDApjrmw3PLa3aeCmIF5KpJy4qdNU9qlj-vzg&oe=63D233DF"
+          src={require("./assets/img/churchHouse.png")}
           alt="..."
         >
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h5>Монгол Сүм</h5>
+          <p>Вашингтон ДиСи дэхь Монгол сүм чуулганы байр.</p>
         </MDBCarouselItem>
         <MDBCarouselItem
           className="w-100 d-block"
           itemId={2}
-          src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/241745973_3846242382144043_5555693040545901093_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=e3f864&_nc_ohc=rV6v4R4ncB0AX-IQ3Gw&_nc_ht=scontent-atl3-2.xx&oh=00_AfDpE0oQrPQcM68Ga3WSKLoumxodxK__GGywHqcwODERVQ&oe=63D11E01"
+          src={require("./assets/img/chuulgan.png")}
           alt="..."
         >
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h5>Нэгдсэн чуулган</h5>
+          <p>Зүүн эрэг орчимын Христ итгэлт хүмүүсийн нэгдсэн чуулган.</p>
         </MDBCarouselItem>
         <MDBCarouselItem
           className="w-100 d-block"
           itemId={3}
-          src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/277512116_4464251460343129_5416994464829105617_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=2DVhQFVIDo4AX9tV_FV&_nc_ht=scontent-atl3-2.xx&oh=00_AfBvX05w_MpYFb-lW-eHaX4zBiWJYkDvLyW-tbDc3YkQ1A&oe=63D268AD"
+          src={require("./assets/img/belief.png")}
           alt="..."
         >
-          <h5>Third slide label</h5>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h5>Залбирлын хүч</h5>
+          <p>Есүстэй хамтдаа Нөхөрлөлд.</p>
         </MDBCarouselItem>
       </MDBCarousel>
       <br />
@@ -70,7 +68,7 @@ const Home = () => {
             <MDBCard className="h-100">
               <MDBCardImage
                 style={{ width: "100%", height: "60%", objectFit: "cover" }}
-                src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/244981360_3917831781651769_2998775317622210632_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=LSmLTZelMNMAX9O9TGY&_nc_ht=scontent-atl3-2.xx&oh=00_AfDk31NHuX4WEgBqr2woJ6ReoJwf7b_XbFqN2HQTGPkcSA&oe=63D0DD39"
+                src={require("./assets/img/cell.png")}
                 alt="..."
                 position="top"
               />
@@ -92,7 +90,7 @@ const Home = () => {
             <MDBCard className="h-100">
               <MDBCardImage
                 style={{ width: "100%", height: "60%", objectFit: "cover" }}
-                src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/276281258_4459073410860934_4216192586414436511_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=3mXyQPqv_SgAX9wrusr&tn=s_dMePxR3gUoFPxe&_nc_ht=scontent-atl3-2.xx&oh=00_AfAaJ5RUc8-mpSgWzCif9Cv-kqsv9Pn8P8KwrGN_GtZfiA&oe=63D08911"
+                src={require("./assets/img/song.png")}
                 alt="..."
                 position="top"
               />
@@ -114,7 +112,7 @@ const Home = () => {
             <MDBCard className="h-100">
               <MDBCardImage
                 style={{ width: "100%", height: "60%", objectFit: "cover" }}
-                src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/277003262_4459072410861034_8888791544468454998_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=B4qSPOa5D0AAX-u046i&_nc_ht=scontent-atl3-2.xx&oh=00_AfDFvDgM-ETdq8ocCD8x-WC3fmyXWwAbJ3qMraui9d0xgQ&oe=63D1E714"
+                src={require("./assets/img/pastor.png")}
                 alt="..."
                 position="top"
               />
@@ -135,7 +133,7 @@ const Home = () => {
             <MDBCard className="h-100">
               <MDBCardImage
                 style={{ width: "100%", height: "60%", objectFit: "cover" }}
-                src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/276997201_4459071034194505_1187073774819982611_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=g6Z2UlF8uvkAX-AJXcD&_nc_ht=scontent-atl3-2.xx&oh=00_AfB8456lXErpMvwrbpkj2hohHBmD0CxUXBmFxSnSXbWJ9Q&oe=63D0E21D"
+                src={require("./assets/img/pray.png")}
                 alt="..."
                 position="top"
               />
@@ -157,7 +155,7 @@ const Home = () => {
             <MDBCard className="h-100">
               <MDBCardImage
                 style={{ width: "100%", height: "60%", objectFit: "cover" }}
-                src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/278011964_4485757841525824_6653069297248429454_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=dtZM1AGFsKsAX__7Apv&tn=s_dMePxR3gUoFPxe&_nc_ht=scontent-atl3-2.xx&oh=00_AfCf5qomR_TY5Z_sUL9_kS9JhNvKcP8MODYLltA7a1ytJQ&oe=63D17B37"
+                src={require("./assets/img/guys.png")}
                 alt="..."
                 position="top"
               />
@@ -179,7 +177,7 @@ const Home = () => {
             <MDBCard className="h-100">
               <MDBCardImage
                 style={{ width: "100%", height: "60%", objectFit: "cover" }}
-                src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/277177859_4459071910861084_8197049579622021811_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=axod_8b__xAAX-xf8fr&_nc_ht=scontent-atl3-2.xx&oh=00_AfCVfGvRP84RuElyjnedILTpwJfLVIyKfCdViYL8Lwz52Q&oe=63D2F091"
+                src={require("./assets/img/kids.png")}
                 alt="..."
                 position="top"
               />

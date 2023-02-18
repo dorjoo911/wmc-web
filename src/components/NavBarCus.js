@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   MDBNavbar,
   MDBContainer,
@@ -12,30 +12,37 @@ import {
   MDBNavbarLink,
   MDBCollapse,
 } from "mdb-react-ui-kit";
+import "./NavBarCus.css";
+
 export default function NavBarCus() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [showNavText, setShowNavText] = useState(false);
+
   const pray = () => {
     navigate(`/auth`);
   };
+
   const aboutUs = () => {
     navigate(`/aboutus`);
   };
+
   const goHome = () => {
     navigate(`/home`);
   };
+
   return (
     <MDBNavbar expand="lg" dark bgColor="dark">
       <MDBContainer fluid>
-        <MDBNavbarBrand onClick={goHome}>
+        <MDBNavbarBrand onClick={goHome} className="navbar-brand-custom">
           {" "}
           <img
-            src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/274369433_4372302672871342_1364061837207403963_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=WYFSejGSmysAX8hKLUd&_nc_ht=scontent-atl3-2.xx&oh=00_AfB-tHS_-VoI3Jt3FRzTFIgtoXNAuHTBV-rKD1o0Q2v3-g&oe=63D0B927"
+            src={require("../assets/img/wmc-logo.png")}
             className="img-fluid rounded-pill"
             alt=""
             style={{ width: "50px" }}
           />{" "}
-          WMC
+          Washington Mongolian Church
         </MDBNavbarBrand>
         <MDBNavbarToggler
           type="button"
@@ -50,17 +57,29 @@ export default function NavBarCus() {
         <MDBCollapse navbar show={showNavText}>
           <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
             <MDBNavbarItem>
-              <MDBNavbarLink onClick={goHome}>Нүүр хуудас</MDBNavbarLink>
+              <MDBNavbarLink
+                active={location.pathname === "/home"}
+                onClick={goHome}
+              >
+                Нүүр хуудас
+              </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink onClick={aboutUs}>Бидний тухай</MDBNavbarLink>
+              <MDBNavbarLink
+                active={location.pathname === "/aboutus"}
+                onClick={aboutUs}
+              >
+                Бидний тухай
+              </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href="#">Библи судлал</MDBNavbarLink>
+              <MDBNavbarLink href="https://www.bible.com/bible/1590/GEN.1.%D0%90%D0%912013">
+                Библи судлал
+              </MDBNavbarLink>
             </MDBNavbarItem>
           </MDBNavbarNav>
           <MDBBtn outline color="success" onClick={pray}>
-            Залбиралд нэгдэх
+            Бүртгэлтэй хэрэглэгчид
           </MDBBtn>
         </MDBCollapse>
       </MDBContainer>
