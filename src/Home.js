@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   MDBContainer,
   MDBIcon,
@@ -22,11 +23,20 @@ import {
 import Verses from "./components/Verses";
 import NavBarCus from "./components/NavBarCus";
 import Footer from "./components/Footer";
+import Banner from "./components/Banner";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const goMagtaal = () => {
+    navigate(`/magtaal`);
+  };
   return (
     <div style={{ textAlign: "center", margin: "5px" }}>
       <NavBarCus />
+      <div style={{ position: "relative", zIndex: "1" }}>
+        <Banner />
+      </div>
       <MDBCarousel showControls showIndicators>
         <MDBCarouselItem
           className="w-100 d-block"
@@ -95,15 +105,16 @@ const Home = () => {
                 position="top"
               />
               <MDBCardBody>
-                <MDBCardTitle>Магтаалын үйлчлэл</MDBCardTitle>
+                <MDBCardTitle>Магтаал үйлчлэл</MDBCardTitle>
                 <MDBCardText>
-                  Бурханыг хамтдаа магтацгаая. WMC нь магтаалын 3 багтай бөгөөд.
-                  Хөгжимдөөд зохиогоод дуулаад ...
+                  Амьсгалтай бүхэн Эзэнийг магтагтун. Вашингтон Монгол цуглаан
+                  маань одоогоор 20 хүний бүрэлдэхүүнтэй 3 магтаалын багаар
+                  үйлчилж байна.
                 </MDBCardText>
               </MDBCardBody>
               <MDBCardFooter>
-                <MDBBtn href="#" outline color="success">
-                  Магтаалд үйлчлэх
+                <MDBBtn onClick={goMagtaal} outline color="success">
+                  Дэлгэрэнгүй ...
                 </MDBBtn>
               </MDBCardFooter>
             </MDBCard>
