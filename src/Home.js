@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
-  MDBContainer,
-  MDBIcon,
   MDBBtn,
   MDBCarousel,
   MDBCarouselItem,
@@ -13,10 +11,8 @@ import {
   MDBCardImage,
   MDBTypography,
   MDBCardHeader,
-  MDBFooter,
   MDBRow,
   MDBCol,
-  MDBInput,
   MDBCardFooter,
 } from "mdb-react-ui-kit";
 
@@ -27,9 +23,11 @@ import Banner from "./components/Banner";
 
 const Home = () => {
   const navigate = useNavigate();
-  const location = useLocation();
   const goMagtaal = () => {
     navigate(`/magtaal`);
+  };
+  const goZaluus = () => {
+    navigate(`/zaluus`);
   };
   return (
     <div style={{ textAlign: "center", margin: "5px" }}>
@@ -135,7 +133,7 @@ const Home = () => {
               </MDBCardBody>
               <MDBCardFooter>
                 <MDBBtn href="#" outline color="success">
-                  Дэлгэрэнгүй харах
+                  Дэлгэрэнгүй ...
                 </MDBBtn>
               </MDBCardFooter>
             </MDBCard>
@@ -171,15 +169,15 @@ const Home = () => {
                 position="top"
               />
               <MDBCardBody>
-                <MDBCardTitle>Залуучуудын нөхөрлөл</MDBCardTitle>
+                <MDBCardTitle>Залуучуудын үйлчлэл</MDBCardTitle>
                 <MDBCardText>
-                  Бурханы үгийн сонсож түүнийн танин мэдэхийг хүсвэл Бүтэн сайн
-                  өдрийн 2pm цагт үргэлж нээлттэй ...
+                  Залуусын цуглаанд 20 наснаас 35 нас хүртэлх залуус хамрагддаг
+                  ба Лхагва гараг бүр орой 19:00 цагт болдог.
                 </MDBCardText>
               </MDBCardBody>
               <MDBCardFooter>
-                <MDBBtn href="#" outline color="success">
-                  Нөхөрлөлд хамрагдах
+                <MDBBtn onClick={goZaluus} outline color="success">
+                  Дэлгэрэнгүй ...
                 </MDBBtn>
               </MDBCardFooter>
             </MDBCard>
