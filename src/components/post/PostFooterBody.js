@@ -1,5 +1,5 @@
 import React from "react";
-import Review from "../Review";
+import Review from "./Review";
 import { MDBCardBody, MDBCardTitle, MDBCardText } from "mdb-react-ui-kit";
 export default function PostFooterBody({ post }) {
   return (

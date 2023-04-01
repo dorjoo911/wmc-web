@@ -25,6 +25,8 @@ exports.login = async (req, res, next) => {
         id: userExist._id,
         email: userExist.email,
         fullname: userExist.fullname,
+        role: userExist.role,
+        avatar: userExist.avatar,
       },
       SECRET
     );

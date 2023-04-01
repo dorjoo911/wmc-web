@@ -1,9 +1,9 @@
 import React from "react";
-import Footer from "../components/Footer";
-import NavBarCus from "../components/NavBarCus";
+import Footer from "../components/general/Footer";
+import NavBarCus from "../components/general/NavBarCus";
 import { MDBCarousel, MDBCarouselItem } from "mdb-react-ui-kit";
-import SongList from "../components/SongsList";
-import VideoList from "../components/VideoList";
+import SongList from "../assets/media/SongsList";
+import VideoList from "../assets/media/VideoList";
 
 export default function Magtaal() {
   return (

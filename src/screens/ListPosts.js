@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
-import Post from "./components/Post";
+import Post from "../components/post/Post";
 import {
   MDBNavbar,
   MDBContainer,
@@ -12,6 +12,8 @@ import {
   MDBRow,
   MDBCol,
 } from "mdb-react-ui-kit";
+import Announcement from "../components/moderator/Announcement";
+import WeeklyAnnouncement from "../components/moderator/WeeklyAnnouncement";
 
 export default function ListPosts() {
   const navigate = useNavigate();
@@ -77,6 +79,8 @@ export default function ListPosts() {
           width: "80%",
         }}
       >
+        <WeeklyAnnouncement />
+        <br />
         <MDBBtn
           onClick={addpost}
           outline

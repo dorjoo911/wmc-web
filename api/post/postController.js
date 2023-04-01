@@ -1,16 +1,5 @@
 const Posts = require("./postModel");
 
-// exports.getPosts = async (req, res) => {
-//   let posts = [];
-
-//   if (req.params.id) {
-//     posts = await Posts.findById(req.params.id);
-//   } else {
-//     posts = await Posts.find();
-//   }
-//   res.status(200).json(posts);
-// };
-
 exports.getPosts = async (req, res) => {
   let posts = [];
 

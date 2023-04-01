@@ -1,7 +1,7 @@
 import React from "react";
 import GalleryZaluus from "../assets/galleryZaluus/GalleryZaluus";
-import Footer from "../components/Footer";
-import NavBarCus from "../components/NavBarCus";
+import Footer from "../components/general/Footer";
+import NavBarCus from "../components/general/NavBarCus";
 import { MDBAccordion, MDBAccordionItem, MDBIcon } from "mdb-react-ui-kit";
 
 export default function Zaluus() {

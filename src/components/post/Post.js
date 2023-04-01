@@ -21,8 +21,8 @@ import axios from "axios";
 
 import PostHeader from "./PostHeader";
 import PostFooterHeader from "./PostFooterHeader";
-import PostFooterBody from "./post/PostFooterBody";
-import PostFooterComment from "./post/PostFooterComment";
+import PostFooterBody from "./PostFooterBody";
+import PostFooterComment from "./PostFooterComment";
 
 export default function Post({ posts, id }) {
   const token = localStorage.getItem("SavedToken");
@@ -57,7 +57,7 @@ export default function Post({ posts, id }) {
       userName: infoToken.fullname,
       date: Date.now().toString(),
     });
-    window.location.reload();
+    // window.location.reload();
   };
   return (
     <>

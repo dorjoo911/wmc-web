@@ -1,9 +1,9 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import axios from "axios";
-import AddPost from "./components/AddPosts";
+import AddPost from "./components/post/AddPosts";
 import Loginout from "./Loginout";
 import Home from "./Home";
-import ListPosts from "./ListPosts";
+import ListPosts from "./screens/ListPosts";
 import About from "./screens/About";
 import Magtaal from "./screens/Magtaal";
 import Zaluus from "./screens/Zaluus";

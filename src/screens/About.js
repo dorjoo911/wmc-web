@@ -7,8 +7,8 @@ import {
   MDBCardImage,
 } from "mdb-react-ui-kit";
 
-import NavBarCus from "../components/NavBarCus";
-import Footer from "../components/Footer";
+import NavBarCus from "../components/general/NavBarCus";
+import Footer from "../components/general/Footer";
 
 export default function About() {
   const [cardHeight, setCardHeight] = useState("auto");

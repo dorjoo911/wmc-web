@@ -7,6 +7,7 @@ const Response = require("./responseObj");
 const authRouter = require("./authRouter");
 const userRouter = require("./user/userRouter");
 const postRouter = require("./post/postRouter");
+const announceRouter = require("./announce/announceRouter");
 
 const app = express();
 dotenv.config();
@@ -16,6 +17,7 @@ app.use(cors());
 app.use("/api/users", userRouter);
 app.use("/api/login", authRouter);
 app.use("/api/posts", postRouter);
+app.use("/api/announces", announceRouter);
 
 app.use((err, req, res, next) => {
   res.status(500).json(new Response(true, err.message, null));

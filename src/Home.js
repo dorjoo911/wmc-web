@@ -16,10 +16,10 @@ import {
   MDBCardFooter,
 } from "mdb-react-ui-kit";
 
-import Verses from "./components/Verses";
-import NavBarCus from "./components/NavBarCus";
-import Footer from "./components/Footer";
-import Banner from "./components/Banner";
+import Verses from "./components/general/Verses";
+import NavBarCus from "./components/general/NavBarCus";
+import Footer from "./components/general/Footer";
+import Banner from "./components/general/Banner";
 
 const Home = () => {
   const navigate = useNavigate();

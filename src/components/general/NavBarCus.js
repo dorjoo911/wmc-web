@@ -37,7 +37,7 @@ export default function NavBarCus() {
         <MDBNavbarBrand onClick={goHome} className="navbar-brand-custom">
           {" "}
           <img
-            src={require("../assets/img/wmc-logo.png")}
+            src={require("../../assets/img/wmc-logo.png")}
             className="img-fluid rounded-pill"
             alt=""
             style={{ width: "50px" }}
