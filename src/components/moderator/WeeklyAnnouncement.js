@@ -51,7 +51,7 @@ export default function WeeklyAnnouncement() {
     }
 
     fetchAnnouncement();
-  }, [announcement]); // re-fetch announcement data when an announcement is added or deleted
+  }, []); // re-fetch announcement data when an announcement is added or deleted
 
   return (
     <div style={{ textAlign: "center" }}>
