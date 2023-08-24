@@ -1,28 +1,32 @@
 import React from "react";
-import { MDBCarousel, MDBCarouselItem } from "mdb-react-ui-kit";
+import Carousel from "react-bootstrap/Carousel";
 
 const GalleryZaluus = () => {
   return (
-    <MDBCarousel showControls fade>
-      <MDBCarouselItem
-        className="w-100 d-block"
-        itemId={1}
-        src={require("../../assets/img/chuulgan.png")}
-        alt="..."
-      />
-      <MDBCarouselItem
-        className="w-100 d-block"
-        itemId={2}
-        src={require("../../assets/img/chuulgan.png")}
-        alt="..."
-      />
-      <MDBCarouselItem
-        className="w-100 d-block"
-        itemId={3}
-        src={require("../../assets/img/chuulgan.png")}
-        alt="..."
-      />
-    </MDBCarousel>
+    <Carousel fade controls={true}>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={require("../../assets/img/guys.png")}
+          alt="..."
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={require("../../assets/img/chuulgan.png")}
+          alt="..."
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={require("../../assets/img/kids.png")}
+          alt="..."
+        />
+      </Carousel.Item>
+    </Carousel>
   );
 };
+
 export default GalleryZaluus;

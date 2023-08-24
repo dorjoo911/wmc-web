@@ -29,7 +29,8 @@ export default function About() {
           className="card-text text-center fs-5"
           style={{
             color: "#333", // Darker gray text
-            lineHeight: "1.5", // Improved line height
+            lineHeight: "1.5",
+            textAlign: "justify", // Improved line height
           }}
         >
           Манай сүмийн эрхэм зорилго нь АНУ болон олон улс орнуудад тархсан
@@ -42,7 +43,7 @@ export default function About() {
           үргэлж нээлттэй байх болно. Та бидний амьдралд Бурханы гайхамшиг
           биелэлээ олох болтугай хэмээн Есүсийн нэр дээр ерөөж байна.
         </p>
-        <p className="card-text text-center fs-6" style={{ color: "#777" }}>
+        <p className="card-left text-left fs-6" style={{ color: "#777" }}>
           WMC team
         </p>
       </div>

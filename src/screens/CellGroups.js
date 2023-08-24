@@ -12,7 +12,7 @@ export default function CellGroups() {
           borderRadius: "5px",
           padding: "20px",
           width: "80%",
-          margin: "0 auto",
+          margin: "10px auto",
           boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)", // Shadow effect
         }}
       >

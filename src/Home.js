@@ -18,10 +18,11 @@ const Home = () => {
   return (
     <div>
       <Navigation />
+      <HomeCrousel />
       <div style={{ width: "80%", margin: "5px auto" }}>
-        <HomeCrousel />
         <div style={{ margin: "5px auto" }}>
           <HomeNews />
+          <br />
           <HomeGroupCards />
           <div
             style={{
