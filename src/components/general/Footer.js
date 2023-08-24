@@ -1,9 +1,6 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 
 export default function Footer() {
-  const navigate = useNavigate();
-
   return (
     <footer className="text-center text-white bg-dark">
       <div className="container p-4">
@@ -12,24 +9,26 @@ export default function Footer() {
             href="https://www.facebook.com/WashingtonMongolianChurch"
             className="btn btn-light m-1"
             role="button"
+            style={iconStyles}
           >
-            <i class="fa-brands fa-facebook"></i>
+            <i className="fab fa-facebook"></i>
           </a>
 
           <a href="#!" className="btn btn-light m-1" role="button">
-            <i className="fab fa-twitter"></i>
+            <i className="fab fa-twitter" style={iconStyles}></i>
           </a>
 
           <a
             href="https://www.google.com/maps/place/Washington+Mongolian+Church/@38.8551968,-77.1259477,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7b6c6e3128487:0x2aeeaef2e4842545!8m2!3d38.8550952!4d-77.1238393"
             className="btn btn-light m-1"
             role="button"
+            style={iconStyles}
           >
             <i className="fas fa-map-marker-alt"></i>
           </a>
 
           <a href="#!" className="btn btn-light m-1" role="button">
-            <i className="fab fa-instagram"></i>
+            <i className="fab fa-instagram" style={iconStyles}></i>
           </a>
         </section>
 
@@ -190,3 +189,7 @@ export default function Footer() {
     </footer>
   );
 }
+const iconStyles = {
+  color: "blue", // Primary color
+  transition: "color 0.3s ease", // Transition for smooth hover effect
+};

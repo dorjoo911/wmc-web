@@ -1,27 +1,21 @@
 import React from "react";
 import Footer from "../components/general/Footer";
-import NavBarCus from "../components/general/NavBarCus";
-import { MDBCarousel, MDBCarouselItem } from "mdb-react-ui-kit";
+import Navigation from "../components/general/Navigation";
 import SongList from "../assets/media/SongsList";
 import VideoList from "../assets/media/VideoList";
 
 export default function Magtaal() {
   return (
     <>
-      <NavBarCus />
+      <Navigation />
+
       <div
         style={{
           textAlign: "center",
           width: "80%",
-          marginLeft: "10%",
+          margin: "5px auto",
         }}
-      >
-        <h3>
-          Бид хүндэтгэлийн цуглаан, хүүхдийн цуглаан, залуусын цуглаан, өсвөрийн
-          цуглаан, эсийн бүлгүүд, үүрийн залбирал ба шөнийн залбиралуудад
-          тогтмол үйлчилж байна.
-        </h3>
-      </div>
+      ></div>
       <div
         className="row row-cols-1 row-cols-md-3 g-4"
         style={{
@@ -33,7 +27,7 @@ export default function Magtaal() {
         <div className="col">
           <div className="card h-100">
             <img
-              src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp"
+              src={require("../assets/img/belief.png")}
               className="card-img-top"
               alt="Skyscrapers"
             />
@@ -49,7 +43,7 @@ export default function Magtaal() {
         <div className="col">
           <div className="card h-100">
             <img
-              src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp"
+              src={require("../assets/img/belief.png")}
               className="card-img-top"
               alt="Los Angeles Skyscrapers"
             />
@@ -65,7 +59,7 @@ export default function Magtaal() {
         <div className="col">
           <div className="card h-100">
             <img
-              src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp"
+              src={require("../assets/img/belief.png")}
               className="card-img-top"
               alt="Palm Springs Road"
             />
@@ -80,9 +74,11 @@ export default function Magtaal() {
         </div>
       </div>
       <div style={{ width: "80%", marginLeft: "10%", textAlign: "center" }}>
-        <SongList />
+        {/* <SongList /> */}
+        <br />
         <VideoList />
       </div>
+      <br />
       <Footer />
     </>
   );
