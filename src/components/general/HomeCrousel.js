@@ -37,8 +37,8 @@ export default function HomeCrousel() {
             alt="..."
           />
           <div className="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+            <h5>Цуглааны байр</h5>
+            <p>790 Carlin Spring rd, Arlington, VA 22204</p>
           </div>
         </div>
         <div className="carousel-item">
@@ -48,8 +48,11 @@ export default function HomeCrousel() {
             alt="..."
           />
           <div className="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
+            <h5>Эзэн дотор хамтдаа!</h5>
+            <p>
+              Ефес 2:22 Та нар ч гэсэн Сүнс дотор Бурханы орших газар болохоор
+              Христ дотор хамтдаа байгуулагдаж байна.
+            </p>
           </div>
         </div>
         <div className="carousel-item">
@@ -59,8 +62,11 @@ export default function HomeCrousel() {
             alt="..."
           />
           <div className="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
+            <h5>Нэгдсэн цуглаан 2022</h5>
+            <p>
+              Ефес 1:23 Чуулган нь Түүний бие тухайлбал бүхний дотор бүгдийг
+              Дүүргэгчийн дүүрэл болой.
+            </p>
           </div>
         </div>
       </div>

@@ -15,14 +15,19 @@ export default function HomeGroupCards() {
   const navigateToDetail = () => {
     navigate("/detail");
   };
+  const imageStyle = {
+    height: "200px", // Adjust the height as needed
+    objectFit: "cover",
+  };
   return (
     <div className="row row-cols-1 row-cols-md-3 g-4">
       <div className="col">
         <div className="card h-100">
           <img
-            src={require("../../assets/img/chuulgan.png")}
+            src={require("../../assets/img/pray.png")}
             className="card-img-top"
             alt="..."
+            style={imageStyle} // Apply the inline CSS here
           />
           <div className="card-body">
             <h5 className="card-title">Хүндэтгэлийн чуулган</h5>
@@ -43,9 +48,10 @@ export default function HomeGroupCards() {
       <div className="col">
         <div className="card h-100">
           <img
-            src={require("../../assets/img/chuulgan.png")}
+            src={require("../../assets/img/primePastor.jpg")}
             className="card-img-top"
             alt="..."
+            style={imageStyle}
           />
           <div className="card-body">
             <h5 className="card-title">Пасторын мэндчилгээ</h5>
@@ -75,9 +81,10 @@ export default function HomeGroupCards() {
       <div className="col">
         <div className="card h-100">
           <img
-            src={require("../../assets/img/chuulgan.png")}
+            src={require("../../assets/img/cell.png")}
             className="card-img-top"
             alt="..."
+            style={imageStyle}
           />
           <div className="card-body">
             <h5 className="card-title">Эсийн бүлэг үйлчлэл</h5>
@@ -98,9 +105,10 @@ export default function HomeGroupCards() {
       <div className="col">
         <div className="card h-100">
           <img
-            src={require("../../assets/img/chuulgan.png")}
+            src={require("../../assets/img/wmc-logo.png")}
             className="card-img-top"
             alt="..."
+            style={imageStyle}
           />
           <div className="card-body">
             <h5 className="card-title">Магтаал үйлчлэл</h5>
@@ -122,9 +130,10 @@ export default function HomeGroupCards() {
       <div className="col">
         <div className="card h-100">
           <img
-            src={require("../../assets/img/chuulgan.png")}
+            src={require("../../assets/img/guys.png")}
             className="card-img-top"
             alt="..."
+            style={imageStyle}
           />
           <div className="card-body">
             <h5 className="card-title">Залуучуудын үйлчлэл</h5>
@@ -145,12 +154,13 @@ export default function HomeGroupCards() {
       <div className="col">
         <div className="card h-100">
           <img
-            src={require("../../assets/img/chuulgan.png")}
+            src={require("../../assets/img/young.jpg")}
             className="card-img-top"
             alt="..."
+            style={imageStyle}
           />
           <div className="card-body">
-            <h5 className="card-title">Хүүхдийн үйлчилэл</h5>
+            <h5 className="card-title">Хүүхдийн үйлчлэл</h5>
             <p className="card-text">
               Бурханы үгийн сонсож түүнийн танин мэдэхийг хүсвэл Бүтэн сайн
               өдрийн 2pm цагт үргэлж нээлттэй ...

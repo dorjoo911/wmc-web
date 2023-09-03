@@ -14,8 +14,12 @@ export default function Footer() {
             <i className="fab fa-facebook"></i>
           </a>
 
-          <a href="#!" className="btn btn-light m-1" role="button">
-            <i className="fab fa-twitter" style={iconStyles}></i>
+          <a
+            href="https://www.youtube.com/@washingtonmongolianchurch9837"
+            className="btn btn-light m-1"
+            role="button"
+          >
+            <i className="fab fa-youtube" style={iconStyles}></i>
           </a>
 
           <a
@@ -27,7 +31,11 @@ export default function Footer() {
             <i className="fas fa-map-marker-alt"></i>
           </a>
 
-          <a href="#!" className="btn btn-light m-1" role="button">
+          <a
+            href="https://www.instagram.com/washington_mongolian_church/?hl=en"
+            className="btn btn-light m-1"
+            role="button"
+          >
             <i className="fab fa-instagram" style={iconStyles}></i>
           </a>
         </section>

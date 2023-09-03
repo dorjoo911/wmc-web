@@ -1,16 +1,16 @@
 import React from "react";
 // import { words } from "../quotes";
 const words = [
-  "Proverbs 16:24 Pleasant words are like a honeycomb, sweetness to the soul and health to the bones.",
-  "John 1:1 In the beginning was the Word, and the Word was with God, and the Word was God",
-  "James 1:22 But be ye doers of the word, and not hearers only, deceiving your own selves.",
-  "Ephesians 6:17 And take the helmet of salvation, and the sword of the Spirit, which is the word of God",
-  "1 John 3:18 My little children, let us not love in word, neither in tongue; but in deed and in truth",
-  "Psalm 56:10 In God will I praise his word: In the LORD will I praise his word",
-  "Psalm 105:19 Until the time that his word came: The word of the LORD tried him.",
-  "Zechariah 1:13 And the LORD answered the angel that talked with me with good words and comfortable words.",
-  "Matthew 12:37 For by thy words thou shalt be justified, and by thy words thou shalt be condemned.",
-  "Colossians 3:17 And whatsoever ye do in word or deed, do all in the name of the Lord Jesus, giving thanks to God and the Father by him.",
+  "Сургаалт үгс 16:24 Тааламжтай үгс нь зөгийн сархинаг шиг, сэтгэлд амттай, ясанд эрүүл мэнд байдаг.",
+  "Иохан 1:1 Эхэндээ Үг байсан бөгөөд Үг нь Бурхантай хамт байсан бөгөөд Үг нь Бурхан байсан",
+  "Иаков 1:22 Гэхдээ та нар өөрсдийгөө хууран мэхэлж, зөвхөн сонсогч биш, үгийг хэрэгжүүлэгчид байгтун.",
+  "Ефес 6:17 Тэгээд авралын дуулга ба Бурханы үг болох Сүнсний илдийг ав",
+  "1 Иохан 3:18 Бяцхан хүүхдүүд минь, үгээр ч, хэлээр ч биш, харин үйлдлээрээ, үнэнээр хайрлацгаая.",
+  "ДУУЛАЛ 56:10 Би Түүний үгийг Бурханд магтан, ЭЗЭНд би Түүний үгийг магтан дуулах болно",
+  "ДУУЛАЛ 105:19 Түүний үг ирэх хүртэл: ЭЗЭНий үг түүнийг сорьсон",
+  "Зехариа 1:13 Надтай ярилцсан тэнгэр элчид ЭЗЭН сайн үг, аятайхан үгсээр хариулав.",
+  "Матай 12:37 Учир нь чи үгээрээ зөвтгөгдөж, үгээрээ яллагдах болно.",
+  "Колоссай 3:17 Та нар үгээрээ ч, үйлдлээрээ ч хамаагүй бүгдийг нь Эзэн Есүсийн нэрээр хийж, түүгээр дамжуулан Бурханд болон Эцэгт талархал илэрхийл.",
 ];
 export default function Verses() {
   return <div>{words[Math.floor(Math.random() * words.length)]}</div>;
