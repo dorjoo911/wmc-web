@@ -11,7 +11,7 @@ export default function CellGroups() {
           backgroundColor: "#f7f7f7", // Smoother gray background
           borderRadius: "5px",
           padding: "20px",
-          width: "80%",
+          width: "90%",
           margin: "10px auto",
           boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)", // Shadow effect
         }}
